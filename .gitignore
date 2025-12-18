@@ -149,3 +149,15 @@ sample_data/
 wandb/
 data/
 output/
+
+vlm/videos/
+
+LICENSE
+command.sh
+docs/
+assets/
+downloads_data.sh
+mojoco_test.py
+poselib/
+runs/
+requirements.txt
