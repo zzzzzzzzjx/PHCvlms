@@ -1,0 +1,27 @@
+
+
+# test
+python phc/run_hydra.py \
+ learning=im_big \
+ exp_name=mixed_viewer \
+ env=env_im \
+ robot=smpl_humanoid \
+ env.motion_list_file=sample_data/cfg/10_motions.yaml \
+ env.num_envs=32 \
+ headless=False \
+ test=True \
+ learning.params.load_checkpoint=True \
+ +learning.params.load_path=output/VLM_MIXED_Training/Humanoid.pth
+
+# frames
+python vlm/frame_extractor.py \
+  --config vlm/cfg/frame_extract.yaml \
+  --input-dir /home/zzz/g1_motion_tracking/data/videos/random/random_l0_npz/During_practice__the_athlete_executed_parallel_bars_hang_with_straight_arms_focusing_on_pull_up_with_chin_over_bar_and_fully_extended_elbows_at_bottom__maintaining_vault_approach_with_progressive_spee.mp4 \
+  --output-dir vlm/frames/
+
+# analysis
+python vlm/run_vlm_llm.py \
+  --config vlm/cfg/llm_config.example.yaml \
+  --images vlm/frames/loop0/During_practice__the_athlete_executed_parallel_bars_hang_with_straight_arms_focusing_on_pull_up_with_chin_over_bar_and_fully_extended_elbows_at_bottom__maintaining_vault_approach_with_progressive_spee_combined.png \
+  --output-csv vlm/output.csv
+

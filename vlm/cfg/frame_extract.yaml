@@ -1,0 +1,24 @@
+input_dir: "vlm/videos/random_l0_npz/During_form_practice__the_practitioner_performed_basic_elbow_strike_with_short_range_and_moderate_force_with_whirlwind_kick_with_pivot_foot_rotation__tight_core_for_balance_and_target_focused_gaze__fo.mp4"   # 输入视频目录
+output_dir: "vlm/frames/loop0"  # 输出帧目录
+
+# 均匀采样的帧数（例如 32 表示在整段视频中等间隔抽取 32 帧）
+num_frames: 15
+
+# 支持的视频后缀
+video_exts: [".mp4", ".mov", ".avi", ".mkv"]
+
+# 输出图片格式
+output_format: "png"
+
+# 调整分辨率
+resize:
+  enabled: true
+  width: 512
+  height: 512
+
+combine:
+  enabled: true
+  # 组合帧文件名，默认使用「视频名_combined.后缀」
+  output_name: ""
+  # 是否保留中间帧（false 表示只保留组合帧）
+  keep_frames: false

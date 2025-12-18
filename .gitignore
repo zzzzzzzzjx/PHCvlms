@@ -156,8 +156,9 @@ LICENSE
 command.sh
 docs/
 assets/
-downloads_data.sh
+download_data.sh
 mojoco_test.py
 poselib/
 runs/
-requirements.txt
+requirement.txt
+index.html

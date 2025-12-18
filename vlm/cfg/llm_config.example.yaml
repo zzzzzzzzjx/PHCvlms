@@ -1,0 +1,11 @@
+base_url: "https://api2.aigcbest.top/v1"
+api_key: "sk-ZEavwbgapOU34px9yAaS9OWhjy2a1BRh7ttBnVQwQlE4iN78"
+model: "qwen-vl-max"
+timeout: 60
+temperature: 0.2
+max_tokens: 1000
+response_format: "json_object"  # keep as json_object so the API returns pure JSON
+# 可选：兼容不同网关的认证/头部设置（非 OpenAI 可按需开启）
+# api_key_header: "X-API-Key"   # 默认 Authorization
+# api_key_prefix: ""            # 默认 Bearer，留空则不加前缀
+# extra_headers: {}             # 例如 {"x-organization": "xxx"}
